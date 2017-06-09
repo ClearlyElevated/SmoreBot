@@ -109,7 +109,7 @@ client.on("message", message => {
       } catch (err) {
         code = err.essage;
       }
-      let evaled = `:inbox_tray: **Input:**\`\`\`js\n${message.content.split(" ").slice(1)}\`\`\`\n\n:outbox_tray: **Output:**\n\`\`\`js\n${code}\`\`\``;
+      let evaled = `:inbox_tray: **Input:**\`\`\`js\n${message.content.split(" ").slice(1).join(" ")}\`\`\`\n\n:outbox_tray: **Output:**\n\`\`\`js\n${code}\`\`\``;
       message.channel.send("evaling...")
         .then((newMsg) => {
           newMsg.edit(evaled)
@@ -562,20 +562,22 @@ client.on("message", message => {
       const collector = client.channels.get(supportChan).createCollector(message => message.content.startsWith(prefix + "call"), {
         time: 0
       });
-      client.channels.get(supportChan).send(`Do \`${prefix}call answer\` to answer call and connect to server in need.`);
+      client.channels.get(supportChan).send(`Do \`${prefix}call answer\` to answer call and connect to server in need or \`${prefix}call end\` to deny call.`);
       collector.on("message", (message) => {
         if (message.content === "+call end") collector.stop("aborted");
         if (message.content === "+call answer") collector.stop("success");
       });
       collector.on("end", (collected, reason) => {
-        if (reason === "time") return msg.reply("The call timed out.");
-        if (reason === "aborted") return msg.reply("The call has been denied.");
+        if (reason === "time") return message.reply("The call timed out.");
+        if (reason === "aborted") {
+          message.reply(":x: The call has been denied.");
+          client.channels.get(supportChan).send(":x: Succesfully denied call.");
+        }
         if (reason === "success") {
-          client.channels.get(supportChan).send("Call picked up.");
-          chan.send("Your call has been picked up by a support representative!");
-          chan.send("You will be helped shortly.");
+          client.channels.get(supportChan).send(":heavy_check_mark: Call picked up!");
+          chan.send(":heavy_check_mark: Your call has been picked up by a support representative!");
+          chan.send(":hourglass: You will be helped shortly.");
           isEnabled = true;
-          client.channels.get(supportChan).send("Connected.");
           client.on("message", message => {
             function contact() {
               if (isEnabled === false) return;
@@ -587,7 +589,7 @@ client.on("message", message => {
                 return isEnabled = false;
               }
               if (message.channel.id === chan.id) client.channels.get(supportChan).send(`:telephone_receiver: **${message.author.tag}**: ${message.content}`);
-              if (message.channel.id === supportChan) chan.send(`:star: **Representative**: ${message.content}`);
+              if (message.channel.id === supportChan) chan.send(`:star: ${message.content}`);
             }
             contact()
           });
