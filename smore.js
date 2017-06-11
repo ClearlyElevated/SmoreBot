@@ -447,7 +447,7 @@ client.on("message", message => {
       toSmore = toSmore[Math.floor(Math.random() * toSmore.length)];
       message.channel.send(toSmore);
     } else if (message.content.startsWith(prefix + "meme")) {
-      let toMeme = [`https://s-media-cache-ak0.pinimg.com/736x/6a/24/32/6a2432d9f8b0d57243daa7fe0c67745f.jpg`,
+      let toMeme = [`https://media0.giphy.com/media/ehc19YLR4Ptbq/giphy.gif`,
         `https://qph.ec.quoracdn.net/main-qimg-cf520202236c0a99986988706131aafb-c`,
         `https://qph.ec.quoracdn.net/main-qimg-762390f6c44fdcb31cf01657d776d181-c`,
         `https://s-media-cache-ak0.pinimg.com/originals/2b/87/17/2b8717e385f04061c8b6b78cd4c663c7.jpg`,
@@ -460,7 +460,6 @@ client.on("message", message => {
         `https://wyncode.co/wp-content/uploads/2014/08/81.jpg`,
         `http://4.bp.blogspot.com/-u16rpXWn7Nw/U1jWM7-8NVI/AAAAAAAAHkY/gshqLZwE8iE/s1600/Difference+Between+Gamers+&+Programmers+Keyboard.jpg`,
         `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvk7n1gMlDTW4V4BJ9dVbJuMNs0Js7nVXt2WqHzCU5hXbGNe2u`,
-        `https://www.google.com/search?q=programming+memes&safe=strict&client=ubuntu&hs=lv1&channel=fs&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi-45if-KnUAhWDJCYKHegeAxYQ_AUICigB&biw=1313&bih=671#imgrc=31C5ndmXL2GROM:`,
         `http://2.bp.blogspot.com/-94oft_Og47c/U1ja4YagplI/AAAAAAAAHlU/Q0dCHUkj0_s/s1600/How+Programmers+Talk.jpg`,
         `https://wyncode.co/wp-content/uploads/2014/08/191.jpg`,
         `https://s-media-cache-ak0.pinimg.com/736x/cc/42/ae/cc42ae3bf4a60760c48f25b654c0cc83.jpg`,
@@ -480,9 +479,28 @@ client.on("message", message => {
         `https://s-media-cache-ak0.pinimg.com/236x/87/dd/9e/87dd9ed4e8edeff76f8e5a1218656e16.jpg`,
         `https://s-media-cache-ak0.pinimg.com/236x/eb/b5/d8/ebb5d8cb556236a732549ad83937546b.jpg`,
         `https://s-media-cache-ak0.pinimg.com/236x/9f/7c/42/9f7c42a12a59e2706b144d62d9b67f4e.jpg`,
+        `https://cdn.discordapp.com/attachments/304065566396645377/323264999684309002/b5ac1149b38bfeec57a6e81331b699a675a2223faa69943c15a35c9409ba463f.png`,
         `Your code can't error if you don't run it`,
         `You can't go through the stages of coding if you don't code`,
-        `https://cdn.discordapp.com/attachments/283339767884677121/307266230203711489/image.jpg`
+        `https://cdn.discordapp.com/attachments/283339767884677121/307266230203711489/image.jpg`,
+        `http://quotesnhumor.com/wp-content/uploads/2016/12/30-In-Real-Life-Memes-3-Real-Life-Funny-Memes.jpg`,
+        `http://cbsnews1.cbsistatic.com/hub/i/r/2016/12/20/d4acaba0-86d5-43ed-8f75-78b7ba6b8608/resize/620x465/e1d65d1488d27435ddc9e0670299dc44/screen-shot-2016-12-20-at-2-01-34-pm.png`,
+        `https://s-media-cache-ak0.pinimg.com/736x/3b/f8/39/3bf839473fdec43adaaba5b475832e3a.jpg`,
+        `http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg`,
+        `https://img.washingtonpost.com/news/the-intersect/wp-content/uploads/sites/32/2015/04/obama-meme.jpg`,
+        `http://www.fullredneck.com/wp-content/uploads/2016/11/Funny-Global-Warming-Meme-13.jpg`,
+        `https://i0.wp.com/blogs.techsmith.com/wp-content/uploads/2016/09/what-is-a-meme.jpg?resize=640%2C480`,
+        `https://s-media-cache-ak0.pinimg.com/736x/92/bd/51/92bd51939ce6e27f773aee3516b2cd6f.jpg`,
+        `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8nr0iyakAda0ySUV_JceEiG9LNwNthZ71hrbvq1vhHd0j7UNdxw`,
+        `https://s-media-cache-ak0.pinimg.com/736x/6f/28/66/6f2866766ac899a6f91bb4775fc69b2d.jpg`,
+        `https://s-media-cache-ak0.pinimg.com/736x/e2/86/f9/e286f9d7ecf6f571b4a58215a2170a80.jpg`,
+        `https://s-media-cache-ak0.pinimg.com/736x/7f/bd/94/7fbd94ac3dca74643cc73aede5da366d.jpg`,
+        `https://s-media-cache-ak0.pinimg.com/736x/3d/54/8b/3d548b4bd6c1651bd13ac48edb07eba7.jpg`,
+        `https://s-media-cache-ak0.pinimg.com/736x/01/0b/68/010b68214bf1eeb91060732aa58bed1e.jpg`,
+        `https://s-media-cache-ak0.pinimg.com/736x/34/8a/92/348a92212ef1bcd89c94555e3d8380b5.jpg`,
+        `https://s-media-cache-ak0.pinimg.com/736x/88/40/22/8840225f3b254ee4ecaafa17b3cf324b.jpg`,
+        `https://s-media-cache-ak0.pinimg.com/736x/ff/56/59/ff56598016c0529acf61c70f80530456.jpg`,
+        `https://carlchenet.com/wp-content/uploads/2016/01/githubdown.png`
       ];
       toMeme = toMeme[Math.floor(Math.random() * toMeme.length)];
       message.channel.send(toMeme);
@@ -575,6 +593,7 @@ client.on("message", message => {
         }
         if (reason === "success") {
           client.channels.get(supportChan).send(":heavy_check_mark: Call picked up!");
+          chan.send(`${message.author}`);
           chan.send(":heavy_check_mark: Your call has been picked up by a support representative!");
           chan.send(":hourglass: You will be helped shortly.");
           isEnabled = true;
@@ -596,17 +615,28 @@ client.on("message", message => {
         };
       });
     } else if (message.content.startsWith(prefix + "uptime")) {
-      const duration = moment.duration(client.uptime).format(' D [days], H [hours], m [minutes], s [seconds]');
+      const duration = moment.duration(client.uptime).format('D [days], H [hours], m [minutes], and s [seconds]');
       const embed = new Discord.RichEmbed()
         .setTitle(`Uptime for ${client.user.username}`)
         .setAuthor(`${client.user.username}`, `${client.user.avatarURL}`)
         .setColor(0x00FF2F)
-        .setDescription(`The bot has been up for ${duration}.`)
+        .setDescription(`${client.user.username} has been up for ${duration}.`)
         .setTimestamp()
         .addField(`**Ready at:**`, `${client.readyAt}`)
       message.channel.send({
         embed: embed
       });
+    } else if (message.content.startsWith(prefix + "activate")) {
+      message.guild.fetchMember("290228059599142913")
+        .then((member) => {
+          if (member) {
+            message.reply("Congratulations!")
+            message.channel.send(`For having <@290228059599142913> on your server, you have now unlocked extra special features on ${client.user}!
+As you may or may not know, this bot, ${client.user}, and <@290228059599142913> are both developed by the SmoreSoftware organization.
+As your reward for having both SmoreSoftware bots, the developers have decided to allow your server to have use of the ${client.user} music module!
+Enjoy and thank you for supporting SmoreSoftware!`);
+          }
+        }).catch(console.error);
     }
   }
 });
@@ -622,6 +652,11 @@ client.on("guildCreate", (server) => {
     "modrole": "FireTrap Mod",
     "modlog": "Not Set"
   }
+
+  guild.fetchMember("290228059599142913")
+    .then((member) => {
+      guild.owner.send('Hello! Thank you for having <@290228059599142913> on your server! Please run \`+activate\`.');
+    }).catch(console.error);
 
   connection.query("INSERT INTO tests SET ?", info, (err) => {
     if (err) return console.error(err);
@@ -649,6 +684,12 @@ client.on("guildDelete", (server) => {
     if (err) return console.error(err);
     console.log("Server Removed!");
   });
+});
+
+client.on("guildMemberAdd", (member) => {
+  if (member.id === "290228059599142913") {
+    member.guild.owner.send('Hello! Thank you for adding <@290228059599142913> to your server! Please run \`+activate\`.');
+  }
 });
 
 process.on("unhandledRejection", err => {
